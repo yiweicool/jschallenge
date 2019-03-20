@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:180px;
+        width: 388px;
+        height: 180px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:120%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+
+ /* In this function you should
+    1) change the url for the background image of the div with the id = "image"
+    to the source file of the preview image
+
+    2) Change the text  of the div with the id = "image"
+    to the alt text of the preview image
+      */
+      function upDate(previewPic){
+      console.log("previewPic");
+      let image = document.querySelector('#image');
+      let url = previewPic.getAttribute('src');
+      let alt = previewPic.getAttribute('alt');
+      image.style.backgroundImage = "url(" + url + ")";
+      document.querySelector("#image").innerHTML = alt;
+	}
+
+	function unDo(){
+     /* In this function you should
+    1) Update the url for the background image of the div with the id = "image"
+    back to the orginal-image.  You can use the css code to see what that original URL was
+
+    2) Change the text  of the div with the id = "image"
+    back to the original text.  You can use the html code to see what that original text was
+    */
+    image.style.backgroundImage = "url()";
+    image.innerHTML = "Hover or tab over/into an image below."
+	}
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "my little cutie"
+            src = "https://www.telegraph.co.uk/content/dam/Pets/spark/pets-at-home-2017/fluffy-white-puppy.jpg"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "sitting in the garden"
+            src = "https://evolutionaryanthropology.duke.edu/sites/evolutionaryanthropology.duke.edu/files/news-images/golden%20ret.jpg"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            src = "https://kids.nationalgeographic.com/content/dam/kids/photos/other/books/PuppyLife/puppy-life-photo-4.adapt.945.1.jpg"
+            alt = "black eyes"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+
+        <img class = "preview" tabindex = "1"
+            src = "https://pupbox.com/wp-content/themes/pupbox-jb/assets/blog.v2/posts-by-age/puppy-running2.jpg"
+            alt = "run with happy"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+
+        <img class = "preview" tabindex = "1"
+            src = "https://kids.nationalgeographic.com/content/dam/kids/photos/other/books/PuppyLife/puppy-life-book-5.adapt.945.1.jpg"
+            alt = "lie with happy"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+
+          <img class = "preview" tabindex = "1"
+            src = "https://www.dogster.com/wp-content/uploads/2017/01/shutterstock_552865819-hero.jpeg"
+            alt = "Handsome boy"
+            onmouseover = "upDate(this)"
+            onmouseleave = "unDo()"
+            onfocus = "upDate(this)"
+            onblur = "unDo()";>
+</body>
+</html>
